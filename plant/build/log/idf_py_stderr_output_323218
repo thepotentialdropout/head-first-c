@@ -1,1 +1,0 @@
-Command: /nix/store/39gydzj63ckwxh1ccdwagdmgzqcq7zib-python3-3.13.12-env/bin/python /nix/store/8a8i7k33n3b43hmgg8k61wnij4j022l1-esp-idf-v5.5.2/components/esptool_py/esptool/esptool.py -p /dev/ttyUSB0 -b 460800 --before default_reset --after hard_reset --chip esp32 erase_flash
