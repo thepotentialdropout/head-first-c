@@ -1,0 +1,2 @@
+source /home/user/src/head-first-c/plant/build/gdbinit/symbols
+source /home/user/src/head-first-c/plant/build/gdbinit/connect

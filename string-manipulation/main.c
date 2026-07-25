@@ -1,9 +1,16 @@
 #include <stdio.h>
-#include "reverse-string.h"
+#include <unistd.h>
+#include "xor-encrypt.h"
 
-int main(void) {
-  char foo[] = "verylongwordeatmyass";
-  reverse_string(foo);
-  printf("%s", foo);
+
+int main(int argc, char* argv[]) {
+
+  char message[80];
+  while(fgets(message, 80, stdin)){
+    xor_encrypt(message);
+    printf("%s\n", message);
+  }
+
   return 0;
 }
+

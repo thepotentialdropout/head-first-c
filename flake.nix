@@ -15,6 +15,8 @@
         clang
         gdb
         file
+        python3
+        tealdeer
       ];
       shellHook = ''
         echo "wsg"

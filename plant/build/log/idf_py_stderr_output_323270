@@ -1,0 +1,2 @@
+Command: ninja erase-otadata
+ninja: error: unknown target 'erase-otadata'

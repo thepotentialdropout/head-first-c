@@ -1,0 +1,2552 @@
+Command: /nix/store/39gydzj63ckwxh1ccdwagdmgzqcq7zib-python3-3.13.12-env/bin/python /nix/store/8a8i7k33n3b43hmgg8k61wnij4j022l1-esp-idf-v5.5.2/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/user/src/head-first-c/plant/build/plant.elf /home/user/src/head-first-c/plant/build/bootloader/bootloader.elf -m '/nix/store/39gydzj63ckwxh1ccdwagdmgzqcq7zib-python3-3.13.12-env/bin/python' '/nix/store/8a8i7k33n3b43hmgg8k61wnij4j022l1-esp-idf-v5.5.2/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (155) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4080[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 3638[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4075[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 3825[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 3968[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 3402[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 3503[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 2955[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 3207[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2480[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2718[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2093[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 2299[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 1677[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 1925[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 1216[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 1488[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 697[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 1042[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 109[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 419[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 94[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 3[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 240[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 202[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 560[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 395[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 765[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 624[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 1970[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 2228[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 1521[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 1762[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 930[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 1232[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 294[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 646[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 22[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 316[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 133[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 534[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 478[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 775[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 578[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 919[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 823[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 1145[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 1056[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 1369[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 1225[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 1563[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 1487[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 1822[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 1698[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 2015[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 1966[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 2278[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 2145[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 2489[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 2415[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 2734[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 2598[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 2971[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 2828[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 3131[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 2983[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 3358[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 3201[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 3634[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 3557[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 3878[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 3760[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 80[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 265[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 192[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 508[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 441[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 705[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 631[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 962[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 823[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 1136[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 1043[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 1354[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 1271[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 1631[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 1471[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 1797[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 1748[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 2071[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 1926[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 2298[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 2123[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 2477[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 2383[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 2710[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 2624[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 2923[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 2896[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 3206[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 3011[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 3318[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 3229[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 3631[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 3493[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 3888[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 3841[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 3890[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 3808[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4086[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4035[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 3696[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 3937[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 3462[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 3535[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 3177[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 3297[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 2961[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 3025[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 2705[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 2727[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 2465[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 2624[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 2237[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 2359[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 1958[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 2079[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 1709[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 1831[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 1534[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 1654[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 1328[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 1440[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 1100[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 1264[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 944[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 1004[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 735[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 807[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 14[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 206[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 86[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 557[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 400[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 951[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 704[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 1303[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 1145[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 1795[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 1593[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2166[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 1997[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2628[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 2445[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 3644[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 2918[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 2032[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 1964[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2295[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2198[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2512[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 2432[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 2746[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 2615[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 2945[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 2851[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 3187[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 3115[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 3363[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 3248[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 3666[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 3451[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 3986[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 3809[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4093[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 3970[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 3979[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 3642[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 3926[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 3341[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 3532[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 3051[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 3242[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 2829[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 2937[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 2598[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 2742[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 2439[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 2495[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 2106[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 2314[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 1885[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 1985[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 1648[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 1728[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 1427[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 1531[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 1232[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 1323[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 1008[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 1149[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 857[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 876[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 592[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 741[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 438[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 541[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 278[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 400[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 113[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 192[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 74[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 186[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 48[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 572[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 327[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 976[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 736[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 1444[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 1169[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 1898[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 1646[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 2422[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 2148[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 2859[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 2639[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 3711[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 3207[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4081[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 47[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 386[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 185[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 739[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 540[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 1175[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 933[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 1646[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 1402[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 2157[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 1920[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 2665[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 2413[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 3139[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 2875[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 3599[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4080[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 3925[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 3730[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 3927[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 3313[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 3431[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 2734[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 2990[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 2280[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 2499[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 1808[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 2129[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 1363[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 1584[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 832[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 1135[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 312[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 530[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 2861[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 2788[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 3131[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2977[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 3247[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 3207[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 3399[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 3335[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 3711[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 3591[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 4039[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 3805[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 3856[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 3455[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 3600[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 3262[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 3331[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 3021[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 3120[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 2779[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 2899[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2512[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2634[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 2259[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 2332[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 2055[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 2147[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 1777[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 1900[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 1591[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 1720[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 1409[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 1491[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 1212[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 1296[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 1052[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 1166[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 887[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 930[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 670[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 775[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 530[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 568[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 347[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 403[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 131[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 240[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 7[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 55[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 659[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 785[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 524[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 619[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 240[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 398[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 49[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 128[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 125[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 55[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 387[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 308[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 695[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 558[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 995[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 886[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 1369[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 1165[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 1672[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 1618[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 2001[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 1793[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 2608[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 2209[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 3553[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 3056[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 48[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 494[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 359[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 997[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 791[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 1239[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 1040[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 1934[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 1620[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 2338[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 2089[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 2743[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 2496[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 3487[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 2977[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4007[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4073[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 80[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 438[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 247[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 826[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 597[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 1264[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 1021[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 1767[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 1535[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 2256[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 1991[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 2755[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 2509[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 3287[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 2964[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 3990[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (662) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (672) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (682) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (692) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (702) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (712) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (722) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (732) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (742) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (752) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (762) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (772) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (782) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (792) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (802) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+[0;32mI (812) EXAMPLE: ADC1, Channel: 0, Value: 4095[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x40086249:0x3ffb34d0 0x40086211:0x3ffb34f0 0x4008709e:0x3ffb3510 0x40088113:0x3ffb3590 0x400871a8:0x3ffb35b0 0x4008715a:0x00000000 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b522e7079
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  1 1980 00:00:00[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ab24h ( 43812) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=0001ab4c vaddr=3ffb0000 size=02430h (  9264) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001cf84 vaddr=40080000 size=03094h ( 12436) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1146ch ( 70764) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00031494 vaddr=40083094 size=0af80h ( 44928) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=0003c41c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (162) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (162) boot: Disabling RNG early entropy source...[0m
+[0;32mI (173) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (181) cpu_start: Pro cpu start user code[0m
+[0;32mI (181) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (183) app_init: Application information:[0m
+[0;32mI (187) app_init: Project name:     plant[0m
+[0;32mI (190) app_init: App version:      cdfd5d6-dirty[0m
+[0;32mI (195) app_init: Compile time:     Jan  1 1980 00:00:00[0m
+[0;32mI (200) app_init: ELF file SHA256:  b522e7079...[0m
+[0;32mI (204) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (208) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (212) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (216) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (226) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (231) heap_init: At 3FFB2D08 len 0002D2F8 (180 KiB): DRAM[0m
+[0;32mI (236) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (242) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (247) heap_init: At 4008E014 len 00011FEC (71 KiB): IRAM[0m
+[0;32mI (254) spi_flash: detected chip: generic[0m
+[0;32mI (256) spi_flash: flash io: dio[0m
+[0;33mW (259) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (272) main_task: Started on CPU0[0m
+[0;32mI (282) main_task: Calling app_main()[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].atten is :3[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].channel is :0[0m
+[0;32mI (282) EXAMPLE: adc_pattern[0].unit is :0[0m
+[0;32mI (292) TASK: ret is 0, ret_num is 256 bytes[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 2094[0m
+[0;32mI (292) EXAMPLE: ADC1, Channel: 0, Value: 2092[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2246[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2212[0m
+[0;32mI (302) EXAMPLE: ADC1, Channel: 0, Value: 2259[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 2286[0m
+[0;32mI (312) EXAMPLE: ADC1, Channel: 0, Value: 2285[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 2271[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 2315[0m
+[0;32mI (322) EXAMPLE: ADC1, Channel: 0, Value: 2303[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 2347[0m
+[0;32mI (332) EXAMPLE: ADC1, Channel: 0, Value: 2368[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 2301[0m
+[0;32mI (342) EXAMPLE: ADC1, Channel: 0, Value: 2305[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 2277[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 2281[0m
+[0;32mI (352) EXAMPLE: ADC1, Channel: 0, Value: 2214[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 2222[0m
+[0;32mI (362) EXAMPLE: ADC1, Channel: 0, Value: 2150[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 2128[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 1984[0m
+[0;32mI (372) EXAMPLE: ADC1, Channel: 0, Value: 2042[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 1929[0m
+[0;32mI (382) EXAMPLE: ADC1, Channel: 0, Value: 1929[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 1759[0m
+[0;32mI (392) EXAMPLE: ADC1, Channel: 0, Value: 1809[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 1649[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 1712[0m
+[0;32mI (402) EXAMPLE: ADC1, Channel: 0, Value: 1522[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 1535[0m
+[0;32mI (412) EXAMPLE: ADC1, Channel: 0, Value: 1364[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 1431[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 1318[0m
+[0;32mI (422) EXAMPLE: ADC1, Channel: 0, Value: 1349[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 1191[0m
+[0;32mI (432) EXAMPLE: ADC1, Channel: 0, Value: 1201[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 1095[0m
+[0;32mI (442) EXAMPLE: ADC1, Channel: 0, Value: 1117[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 944[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 989[0m
+[0;32mI (452) EXAMPLE: ADC1, Channel: 0, Value: 868[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 850[0m
+[0;32mI (462) EXAMPLE: ADC1, Channel: 0, Value: 709[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 830[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 650[0m
+[0;32mI (472) EXAMPLE: ADC1, Channel: 0, Value: 731[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 525[0m
+[0;32mI (482) EXAMPLE: ADC1, Channel: 0, Value: 631[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 463[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 506[0m
+[0;32mI (492) EXAMPLE: ADC1, Channel: 0, Value: 373[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 427[0m
+[0;32mI (502) EXAMPLE: ADC1, Channel: 0, Value: 337[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 387[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 268[0m
+[0;32mI (512) EXAMPLE: ADC1, Channel: 0, Value: 258[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 171[0m
+[0;32mI (522) EXAMPLE: ADC1, Channel: 0, Value: 235[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 129[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 140[0m
+[0;32mI (532) EXAMPLE: ADC1, Channel: 0, Value: 71[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 49[0m
+[0;32mI (542) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (552) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (562) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (572) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (582) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (592) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (602) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (612) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (622) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (632) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (642) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
+[0;32mI (652) EXAMPLE: ADC1, Channel: 0, Value: 0[0m
