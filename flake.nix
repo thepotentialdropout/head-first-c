@@ -17,6 +17,7 @@
         file
         python3
         tealdeer
+        valgrind
       ];
       shellHook = ''
         echo "wsg"
