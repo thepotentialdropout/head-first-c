@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "testing-machine.c"
+#include "function-pointers.c"
 
 int main(void){
   int NUM_ADS = 7;
@@ -15,12 +16,7 @@ int main(void){
     "Jed: DBM likes theater, books and dining"
   };
 
-  int NUM_TAGS = 2;
-  char *tags[] = {
-    "movies",
-    "sports"
-  };
+  find(sports_no_beiber, ADS, NUM_ADS);
 
-  testing_machine(ADS, tags, NUM_ADS, NUM_TAGS);
   return 0;
 }
