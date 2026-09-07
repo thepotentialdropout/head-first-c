@@ -73,7 +73,10 @@ typedef struct {
 } to_sort;
 
 int main(void){
-  to_sort sort_obj_array[] = { { COMPARE, {1, 2, 3, 5, 4 } }, {COMPARE_DESCENDING, {3, 4, 5, 2, 8 } } };
+  to_sort sort_obj_array[] = { 
+    { COMPARE, { 1, 2, 3, 5, 4 } },
+    { COMPARE_DESCENDING, { 3, 4, 5, 2, 8 } }
+  };
 
   for ( int i = 0; i < 2; i++){
     qsort(sort_obj_array[i].list, 5, sizeof(int),sort_type_list[sort_obj_array[i].type]);

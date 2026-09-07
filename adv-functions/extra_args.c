@@ -16,19 +16,19 @@ float price[] = {
 };
 
 
-float total(int args, ...){
+float find_total(int args_num, ...){
   va_list args_list;
-  va_start( args_list, args);
+  va_start( args_list, args_num);
   
   float total_price;
-  for ( int i = 0; i< args; i++){
-    total_price += price[va_arg(args_list, int)];
+  for ( int i = 0; i< args_num; i++){
+    total_price += price[ va_arg( args_list, int ) ];
   }
   return total_price;
 }
 
 int main(void){
-  printf("%f\n", total( 2, ZOMBIE, MUDSLIDE));
+  printf( "%f \n", find_total( 2, ZOMBIE, MUDSLIDE ));
 
   return 0;
 }
