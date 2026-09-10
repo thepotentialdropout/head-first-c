@@ -1,8 +1,0 @@
-/home/user/src/head-first-c/.devenv/bootstrap/bootstrapLib.nix
-/home/user/src/head-first-c/.devenv/bootstrap/default.nix
-/home/user/src/head-first-c/.devenv/bootstrap/resolve-lock.nix
-/home/user/src/head-first-c/devenv.local.nix
-/home/user/src/head-first-c/devenv.lock
-/home/user/src/head-first-c/devenv.nix
-/home/user/.config/nixpkgs/overlays
-/home/user/.config/nixpkgs/overlays.nix
