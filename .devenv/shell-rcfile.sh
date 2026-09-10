@@ -193,7 +193,7 @@ fi
 
 __devenv_reload_apply() {
     # Source new environment if a reload is pending
-    if [ -f "/tmp/devenv-reload-107324.sh" ]; then
+    if [ -f "/tmp/devenv-reload-121501.sh" ]; then
         # Reverse previous diff to restore base environment
         __devenv_apply_reverse_diff
 
@@ -203,8 +203,8 @@ __devenv_reload_apply() {
         __devenv_capture_env > "$before_file"
 
         # Source new devenv environment
-        source "/tmp/devenv-reload-107324.sh"
-        rm -f "/tmp/devenv-reload-107324.sh"
+        source "/tmp/devenv-reload-121501.sh"
+        rm -f "/tmp/devenv-reload-121501.sh"
 
         # Compute and store new diff (in _DEVENV_DIFF env var)
         __devenv_compute_diff "$before_file"

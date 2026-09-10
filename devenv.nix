@@ -11,9 +11,9 @@
     c.debugger = pkgs.gdb;
   };
 
-  packages = [
-    pkgs.gnumake
-    pkgs.valgrind
+  packages = with pkgs; [
+    gnumake
+    valgrind
   ];
 
 }
