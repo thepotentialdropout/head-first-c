@@ -1,0 +1,2 @@
+-I
+/nix/store/862ph75q26s9bzm9za4p8nzq1857dmvw-opencv-4.13.0/include/opencv4
