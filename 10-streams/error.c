@@ -4,6 +4,6 @@
 #include <stdlib.h>
 
 void error(char* message){
-  printf( "%s: %s\n", message, strerror(errno));
+  fprintf( stderr, "%s: %s\n", message, strerror(errno));
   exit(1);
 }

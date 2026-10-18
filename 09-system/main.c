@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (!pid) {
-      if (execle("./sysecho", "./sysecho", NULL, vars) == -1) {
+      if (execle("/nix/store/97d5ygrvqj55f4nx1x34wfdcc7qn11c0-coreutils-9.11/bin/echo", "/nix/store/97d5ygrvqj55f4nx1x34wfdcc7qn11c0-coreutils-9.11/bin/echo", p_nos[i], NULL, vars) == -1) {
         fprintf(stderr, "cant run command: %s\n", strerror(errno));
         return 1;
       }
